@@ -1,0 +1,9 @@
+<aura:component controller="ContactController_v1">
+    <aura:attribute name="mydata" type="Object"/>
+    <aura:attribute name="mycolumns" type="List"/>
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    <lightning:datatable data="{! v.mydata }" 
+        columns="{! v.mycolumns }" 
+        keyField="Id"
+        onrowselection="{! c.getSelectedName }"/>
+</aura:component>
